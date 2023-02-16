@@ -1,0 +1,82 @@
+#weather-app{
+  padding-top: 2rem;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.location input {
+  padding: 1rem 1rem 1rem 2.2rem;
+  width: 15rem;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  border-radius: 25px;
+  border: 2px solid white;
+  background: rgba(128, 62, 0, 0.5);
+}
+
+.location-icon {
+  z-index: 1;
+  position: relative;
+}
+
+.location-icon i {
+  color: #ffffff;
+  position: absolute;
+  top: 0.25rem;
+  left: 1rem;
+}
+
+.location input::placeholder {
+  color: #ffffff;
+}
+
+.temperature{
+  padding: 1rem 0;
+}
+
+.sunriseSunset{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.sunriseSunset img{
+  height: 2.5rem;
+}
+
+.sunimg{
+  display: flex;
+  align-items: center;
+}
+
+.temp-card{
+  background-color: rgba(163, 93, 228, 0.7);
+  width: max-content;
+  margin: 2rem auto;
+  padding: 2rem 6rem;
+  border-radius: 3rem;
+  color: #ffffff;
+}
+
+.otherFactor{
+  color: #ffffff;
+  width: max-content;
+  display: flex;
+  margin: 2rem auto 0;
+  background-color: rgba(163, 93, 228, 0.7);
+  padding: 1rem;
+  gap: 1.2rem;
+  border-radius: 0.5rem;
+}
+.weatherIcon{
+  height: 5rem;
+}
+.realTemp{
+  font-size: 3rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
