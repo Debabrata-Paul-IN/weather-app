@@ -7,12 +7,9 @@
   --conatiner-tablet: 87%;
   --container-mobile: 94%;
 }
-body {
-  font-family: "Poppins", sans-serif;
-  background: url(./asset/background.jpg);
-  height: 100vh;
-  background-repeat: no-repeat;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  display: none;
 }

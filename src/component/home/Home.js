@@ -26,7 +26,7 @@ export default function Home() {
 */
 
   const searchLocation = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' || e.type === 'click') {
       fetch(url).then((response) => {
         return response.json();
       }).then((data) => {
@@ -37,12 +37,16 @@ export default function Home() {
     }
   }
 
+/*  const handleSearchBtn = (e)=>{
+  console.log(e.type);
+}*/
 
   if (data.main) {
     const sunRise = new Date(data.sys.sunrise * 1000);
     const sunSet = new Date(data.sys.sunset * 1000);
+    const date = new Date(data.dt * 1000);
     const weatherIcon = data.weather[0].icon;
-
+    console.log();
 
     return (
       <div id='weather-app'>
@@ -53,11 +57,17 @@ export default function Home() {
               onChange={(e) => setLocation(e.target.value)}
               onKeyPress={searchLocation}
               placeholder='Enter a city'></input>
+              <span className='search-icon'
+              onClick={searchLocation}>
+              <i className="fa-solid fa-magnifying-glass"></i>
+              </span>
           </div>
           <div className='temp-card'>
             <div className='temperature'>
               {data.main ?
                 <div>
+                  <p className='currentDate'>{date.toLocaleDateString('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</p>
+                  <hr></hr>
                   <h1>{data.name}</h1>
                   <p>{(data.weather[0].description).toUpperCase()}</p>
                   {<p><img className='weatherIcon' src={`http://openweathermap.org/img/wn/${weatherIcon}.png`} alt='Icon' /></p>}
@@ -99,6 +109,17 @@ export default function Home() {
               onChange={(e) => setLocation(e.target.value)}
               onKeyPress={searchLocation}
               placeholder='Enter a city'></input>
+              <span className='search-icon'
+              onClick={searchLocation}>
+              <i className="fa-solid fa-magnifying-glass"></i>
+              </span>
+          </div>
+          <div className='temp-card-nocity'>
+            <h1>Welcome</h1>
+            <h1>to</h1>
+            <h1>Weather App</h1>
+            <p>!i! Please enter a correct city name to check live weather report !i!</p>
+            
           </div>
         </div>
       </div>
