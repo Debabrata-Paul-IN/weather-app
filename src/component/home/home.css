@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 #weather-app{
   
   font-family: "Poppins", sans-serif;
@@ -9,13 +10,16 @@
   background-size: cover;
   background-position: center;
 }
+
 .container {
   width: 80%;
   margin: 0 auto;
 }
+
 .location{
   padding-top: 2rem;
 }
+
 .location input {
   padding: 1rem 1rem 1rem 2.2rem;
   width: 15rem;
@@ -54,6 +58,16 @@
   cursor: pointer;
 }
 
+.temp-card{
+  background-color: rgba(163, 93, 228, 0.7);
+  width: max-content;
+  margin: 1.2rem auto;
+  padding: 2rem 6rem;
+  border-radius: 1.2rem;
+  color: #ffffff;
+  border: 3px solid white;
+}
+
 .sunriseSunset{
   display: flex;
   align-items: center;
@@ -74,16 +88,6 @@
   padding-right: 10px;
 }
 
-.temp-card{
-  background-color: rgba(163, 93, 228, 0.7);
-  width: max-content;
-  margin: 1.2rem auto;
-  padding: 2rem 6rem;
-  border-radius: 1.2rem;
-  color: #ffffff;
-  border: 3px solid white;
-}
-
 .temp-card-nocity{
   background-color: rgba(163, 93, 228, 0.7);
   margin: 1.2rem auto;
@@ -97,7 +101,9 @@
   justify-content: center;
   
 }
-
+.temp-card-nocity{
+  border: 3px solid white;
+}
 .temp-card-nocity h1{
   font-size: 4.5rem;
   font-family: 'Dancing Script', cursive;
