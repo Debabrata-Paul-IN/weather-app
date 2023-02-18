@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 #weather-app{
-  padding-top: 2rem;
+  
   font-family: "Poppins", sans-serif;
   background: url(../../asset/background.jpg);
   height: 100vh;
@@ -13,7 +13,9 @@
   width: 80%;
   margin: 0 auto;
 }
-
+.location{
+  padding-top: 2rem;
+}
 .location input {
   padding: 1rem 1rem 1rem 2.2rem;
   width: 15rem;
@@ -77,8 +79,9 @@
   width: max-content;
   margin: 1.2rem auto;
   padding: 2rem 6rem;
-  border-radius: 3rem;
+  border-radius: 1.2rem;
   color: #ffffff;
+  border: 3px solid white;
 }
 
 .temp-card-nocity{
@@ -109,11 +112,12 @@
   color: #ffffff;
   width: max-content;
   display: flex;
-  margin: 2rem auto 0;
+  margin: 1rem auto 0;
   background-color: rgba(163, 93, 228, 0.7);
   padding: 1rem;
   gap: 1.2rem;
   border-radius: 0.5rem;
+  border: 2px solid white;
 }
 .weatherIcon{
   height: 5rem;
@@ -139,19 +143,34 @@
   
 }
 
+@media screen and (max-width: 600px) {
+  .otherFactor{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0 auto;
+    align-items:flex-start;
+    padding:0.8rem 1.5rem;
+    width: 20rem;
+    border-radius: 1rem;
+    
+  }
+}
+
 
 /*** For Small Devices (Mobile) ****/
 
 @media screen and (max-width: 500px) {
-  #weather-app{
-    width: 100vw;
-    height: 96.5vh;
-  }
+ 
   .container{
     width: var(--container-mobile);
   }
   .location input{
     width: 12rem;
+  }
+  .temp-card{
+    padding: 2rem 2rem;
+    margin: 1rem auto;
   }
   .temp-card-nocity{
     padding: 1rem 2.5rem;
@@ -162,23 +181,30 @@
   .temp-card-nocity p{
     font-size: 1rem;
   }
+  .otherFactor{
+    width: 12rem;
+  }
 }
 
 @media screen and (max-width: 300px){
-  #weather-app{
-    width: 100vw;
-    height: 95vh;
-  }
-
   .location input {
     width: 9rem;
   }
-
+  .temp-card{
+    padding: 1rem 0.5rem;
+  }
   .temp-card-nocity h1{
     font-size: 2rem;
   }
 
   .temp-card-nocity p{
     font-size: 0.7rem;
+  }
+  .sunriseSunset{
+    gap: 1rem;
+    
+  }
+  .otherFactor{
+    width: 13rem;
   }
 }
